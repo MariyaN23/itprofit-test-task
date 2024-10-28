@@ -1,0 +1,93 @@
+$border-color: #e6e6e6;
+$input-color: #d1d0d0;
+$error: #dc0000;
+$success: #00b62d;
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    fieldset {
+      border: 2px solid $border-color;
+      padding: 10px;
+    }
+
+    legend {
+      color: grey;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px;
+      font-size: 16px;
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 30px;
+        border: 1px solid $input-color;
+        border-radius: 5px;
+        padding-left: 10px;
+
+        &.input-error {
+          border: 1px solid $error;
+        }
+      }
+
+      .error {
+        color: $error;
+        font-size: 12px;
+        position: absolute;
+      }
+    }
+
+
+    .input-field-textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px;
+
+      textarea {
+        width: 100%;
+        border: 1px solid $input-color;
+        border-radius: 5px;
+        height: 100px;
+        padding: 10px;
+        resize: none;
+        overflow: auto;
+
+        &.input-error {
+          border: 1px solid $error;
+        }
+      }
+
+      .error {
+        color: $error;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .res-status {
+    margin-top: 10px;
+
+    .res-error {
+      color: $error;
+    }
+
+    .res-success {
+      color: $success;
+    }
+  }
+
+  @media (max-width: 425px) {
+    max-width: 300px;
+    padding: 20px;
+  }
+}

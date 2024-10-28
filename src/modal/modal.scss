@@ -1,0 +1,28 @@
+$border-modal: #979797;
+
+dialog {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  border: 2px solid $border-modal;
+
+  animation: openModal 0.5s ease-in-out forwards;
+
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5%;
+  }
+}
+
+@keyframes openModal {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

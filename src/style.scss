@@ -1,0 +1,41 @@
+$main-text-color: #373737;
+$accent-text-color: #ffffff;
+$button: #8c2de4;
+$button-hover: #a85ced;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+
+  min-width: 360px;
+  color: $main-text-color;
+
+  button {
+    border: none;
+    border-radius: 5px;
+    align-self: flex-end;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: $button;
+    color: $accent-text-color;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $button-hover;
+    }
+  }
+}

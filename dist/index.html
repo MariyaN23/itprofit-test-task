@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+<script defer src="bundle.js"></script></head>
+<body>
+<!--form-->
+<div class="form-container">
+    <form action="" method="post" id="form" novalidate>
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <div class="input-field">
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" maxlength="40">
+                <div class="error"></div>
+            </div>
+            <div class="input-field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" maxlength="40">
+                <div class="error"></div>
+            </div>
+            <div class="input-field">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="text" placeholder="+375-(__)-___-__-__">
+                <div class="error"></div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Ваше сообщение</legend>
+            <div class="input-field-textarea">
+                <label for="message">
+                    <textarea id="message" name="message" placeholder="Введите текст сообщения"
+                              maxlength="200"></textarea>
+                    <div class="error"></div>
+                </label>
+            </div>
+        </fieldset>
+        <button type="submit">Отправить</button>
+    </form>
+    <div class="res-status">
+        <div id="res-error" class="res-error"></div>
+        <div id="res-success" class="res-success"></div>
+    </div>
+
+    <!--modal-->
+    <button data-open-modal>Модальное окно</button>
+    <dialog data-modal>
+        <div class="modal-container">
+            <button data-close-modal>Закрыть</button>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cumque doloremque eius expedita harum id
+                laboriosam magnam nam velit vitae voluptates?
+            </div>
+        </div>
+    </dialog>
+</div>
+</body>
+</html>
